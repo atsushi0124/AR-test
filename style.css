@@ -13,7 +13,3 @@ a-scene {
 .hidden {
   display: none !important;
 }
-
-.a-modal {
-  display: none !important;
-}
