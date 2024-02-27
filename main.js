@@ -5,7 +5,8 @@ video.addEventListener("loadeddata", function () {
   console.log("loadeddata発生");
 });
 
-AFRAME.registerComponent("link", {
+AFRAME.registerComponent("customLink", {
+  // "link"から"customLink"に名前を変更
   init: function () {
     let touchDownHandler = function (e) {
       const url = "https://koo-inc.jp/";
