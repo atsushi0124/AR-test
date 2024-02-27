@@ -13,3 +13,7 @@ a-scene {
 .hidden {
   display: none !important;
 }
+
+.a-dialog {
+  display: none !important;
+}
