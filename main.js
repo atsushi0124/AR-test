@@ -5,10 +5,17 @@ video.addEventListener("loadeddata", function () {
   console.log("loadeddata発生");
 });
 
-window.onload = function () {
-  window.addEventListener("mousedown", touchDownHandler);
-  window.addEventListener("touchstart", touchDownHandler);
-};
+AFRAME.registerComponent("link", {
+  init: function () {
+    let touchDownHandler = function (e) {
+      const url = "https://koo-inc.jp/";
+      window.open(url, "_blank");
+      console.log("クリックされました");
+    };
+    window.addEventListener("mousedown", touchDownHandler);
+    window.addEventListener("touchstart", touchDownHandler);
+  },
+});
 
 AFRAME.registerComponent("marker", {
   init: function () {
@@ -25,9 +32,3 @@ AFRAME.registerComponent("marker", {
     });
   },
 });
-
-let touchDownHandler = function (e) {
-  const url = "https://koo-inc.jp/";
-  window.open(url, "_blank");
-  console.log("クリックされました");
-};
