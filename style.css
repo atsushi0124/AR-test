@@ -20,4 +20,5 @@ a-scene {
 
 .btn {
   position: fixed;
+  display: flex;
 }
