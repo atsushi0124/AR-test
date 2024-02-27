@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.btn {
+  height: 30px;
+  position: fixed;
+  z-index: 999;
+}
+
+a-scene {
+  z-index: -1; /* シーンを背面に */
+}
+
+.hidden {
+  display: none !important;
+}
