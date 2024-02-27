@@ -26,8 +26,10 @@ AFRAME.registerComponent("marker", {
   },
 });
 
-// let touchDownHandler = function (e) {
-//   const url = "https://koo-inc.jp/";
-//   window.open(url, "_blank");
-//   console.log("クリックされました");
-// };
+AFRAME.registerComponent("marker", {
+let touchDownHandler = function (e) {
+  const url = "https://koo-inc.jp/";
+  window.open(url, "_blank");
+  console.log("クリックされました");
+}
+});
