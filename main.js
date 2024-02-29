@@ -10,9 +10,9 @@ video.addEventListener("loadeddata", function () {
   console.log("loadeddata発生");
 });
 
-arVideo.on('click', function(){
-  console.log('クリックしました')
-}
+arVideo.on("click", function () {
+  console.log("クリックしました");
+});
 
 // AFRAME.registerComponent("customLink", {
 //   // "link"から"customLink"に名前を変更
