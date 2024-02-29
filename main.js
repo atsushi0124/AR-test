@@ -47,6 +47,13 @@ AFRAME.registerComponent("marker", {
     marker.addEventListener("markerFound", function () {
       console.log("マーカーが見つかりました");
       video.play();
+      if (video) {
+        video.addEventListener("ended", function () {
+          console.log("ended発生");
+        });
+      } else {
+        console.log("video要素が見つかりません。");
+      }
     });
 
     marker.addEventListener("markerLost", function () {
