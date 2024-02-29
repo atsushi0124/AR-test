@@ -3,7 +3,7 @@ let text = document.getElementById("text");
 
 video.addEventListener("loadeddata", function () {
   const load = document.getElementsByClassName("load");
-  load.style.display = none;
+  load.style.display = "none";
   console.log("loadeddata発生");
 });
 
