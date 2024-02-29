@@ -7,26 +7,27 @@ video.addEventListener("loadeddata", function () {
   console.log("loadeddata発生");
 });
 
-AFRAME.registerComponent("customLink", {
-  // "link"から"customLink"に名前を変更
-  init: function () {
-    let touchDownHandler = function (e) {
-      const url = "https://koo-inc.jp/";
-      window.open(url, "_blank");
-      console.log("クリックされました");
-    };
-    window.addEventListener("mousedown", touchDownHandler);
-    window.addEventListener("touchstart", touchDownHandler);
-  },
-});
+// AFRAME.registerComponent("customLink", {
+//   // "link"から"customLink"に名前を変更
+//   init: function () {
+//     let touchDownHandler = function (e) {
+//       const url = "https://koo-inc.jp/";
+//       window.open(url, "_blank");
+//       console.log("クリックされました");
+//     };
+//     window.addEventListener("mousedown", touchDownHandler);
+//     window.addEventListener("touchstart", touchDownHandler);
+//   },
+// });
 
 AFRAME.registerComponent("click-link", {
   schema: {
     url: {type: "string"},
   },
   init: function () {
-    var data = this.data;
-    this.el.addEventListener("click", function () {
+    let data = this.data;
+    this.el.addEventListener("click", () => {
+      console.log("クリックされました。");
       window.open(data.url, "_blank");
     });
   },
