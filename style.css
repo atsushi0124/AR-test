@@ -10,7 +10,10 @@
 
 .btn {
   height: 30px;
-  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
   z-index: 999;
 }
 
@@ -24,9 +27,4 @@ a-scene {
 
 .a-modal {
   display: none !important;
-}
-
-.btn {
-  position: fixed;
-  display: flex;
 }

@@ -1,17 +1,10 @@
 let video = document.getElementById("my-video");
 let text = document.getElementById("text");
 
-const arVideo = document.getElementById("ar-video");
-console.log(arVideo);
-
 video.addEventListener("loadeddata", function () {
   const load = document.getElementById("load");
   load.style.display = "none";
   console.log("loadeddata発生");
-});
-
-arVideo.addEventListener("click", function () {
-  console.log("クリックしました");
 });
 
 // AFRAME.registerComponent("customLink", {
@@ -49,7 +42,7 @@ AFRAME.registerComponent("marker", {
       video.play();
       if (video) {
         video.addEventListener("ended", function () {
-          console.log("ended発生");
+          video.currentTime = 0;
         });
       } else {
         console.log("video要素が見つかりません。");
