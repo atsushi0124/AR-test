@@ -10,7 +10,7 @@ video.addEventListener("loadeddata", function () {
   console.log("loadeddata発生");
 });
 
-arVideo.on("click", function () {
+arVideo.addEventListener("click", function () {
   console.log("クリックしました");
 });
 
