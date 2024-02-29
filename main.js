@@ -20,6 +20,18 @@ AFRAME.registerComponent("customLink", {
   },
 });
 
+AFRAME.registerComponent("click-link", {
+  schema: {
+    url: {type: "string"},
+  },
+  init: function () {
+    var data = this.data;
+    this.el.addEventListener("click", function () {
+      window.open(data.url, "_blank");
+    });
+  },
+});
+
 AFRAME.registerComponent("marker", {
   init: function () {
     const marker = this.el;
