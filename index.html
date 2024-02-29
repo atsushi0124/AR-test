@@ -18,17 +18,17 @@
     </div>
 
     <!-- シーンの追加とデバックUIを非表示 -->
-    <a-scene embedded>
+    <a-scene embedded vr-mode-ui="enabled: false">
         <a-assets timeout>
             <video id="my-video" loop="true" src="./paseri.mp4 "></video>
+            <h1 id="text">クリックするとリンクに飛びます。</h1>
         </a-assets>
         <!-- ③ 作成したマーカーでのソース -->
         <a-marker type='pattern' url='./pattern-marker.patt' marker>
             <a-video src="#my-video" width="2.5" height="1.4" position="0 0 0" rotation="-90 0 0" playsinline></a-video>
-
-
+            <a-text src="#text" position="0 0 0 "></a-text>
         </a-marker>
-        <a-entity camera></a-entity>
+        <a-entity camera cursor="fuse: false; rayOrigin: mouse;"></a-entity>
     </a-scene>
 
     <div class="btn" style="position: fixed; bottom: 150px; left: 250px;">
