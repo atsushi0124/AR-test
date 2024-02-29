@@ -2,6 +2,8 @@ let video = document.getElementById("my-video");
 let text = document.getElementById("text");
 
 video.addEventListener("loadeddata", function () {
+  const load = document.getElementsByClassName("load");
+  load.style.display = none;
   console.log("loadeddata発生");
 });
 
@@ -23,7 +25,7 @@ AFRAME.registerComponent("marker", {
     const marker = this.el;
 
     marker.addEventListener("markerFound", function () {
-      console.log("マーかーが見つかりました");
+      console.log("マーカーが見つかりました");
       video.play();
     });
 
