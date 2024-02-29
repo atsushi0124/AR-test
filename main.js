@@ -1,6 +1,9 @@
 let video = document.getElementById("my-video");
 let text = document.getElementById("text");
 
+const arVideo = document.getElementById("ar-video");
+console.log(arVideo);
+
 video.addEventListener("loadeddata", function () {
   const load = document.getElementById("load");
   load.style.display = "none";
