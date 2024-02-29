@@ -2,7 +2,7 @@ let video = document.getElementById("my-video");
 let text = document.getElementById("text");
 
 video.addEventListener("loadeddata", function () {
-  const load = document.getElementsById("load");
+  const load = document.getElementById("load");
   load.style.display = "none";
   console.log("loadeddata発生");
 });
