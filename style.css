@@ -24,11 +24,15 @@
   justify-content: center;
   border-radius: 5px;
   transition: 0.5s;
-  margin: 0 5px;
+  margin: 0 10px;
   align-items: center;
 }
 
 .btn:hover {
+  background-color: black;
+}
+
+.btn a:hover {
   background-color: black;
   color: #fff;
 }
